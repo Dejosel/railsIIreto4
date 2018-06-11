@@ -1,4 +1,5 @@
 class PinsController < ApplicationController
+  before_action :basic_auth
   before_action :authenticate_user!, except: [:index]
 
   def index

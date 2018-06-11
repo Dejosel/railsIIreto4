@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  def authenticate_user!
+  def basic_auth
     authenticate_or_request_with_http_basic do |username, token|
       user = User.find_by_email(username)
       if user.api_token == token
