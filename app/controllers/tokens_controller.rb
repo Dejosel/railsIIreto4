@@ -1,4 +1,4 @@
 class TokensController < ApplicationController
-  def show
-  end
+	def show
+  end 
 end
